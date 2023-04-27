@@ -16,9 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from paraphrasing import views
+from paraphrasing.views import paraphrase
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('hello/', views.hello, name="hello"),
+    # path('hello/', views.hello, name="hello"),
+    path('paraphrase/', paraphrase, name="paraphrase"),
 ]
